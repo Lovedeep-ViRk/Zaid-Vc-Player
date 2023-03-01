@@ -54,13 +54,9 @@ SPAM_TEXT = """
 """
 
 RAID_TEXT = """
-✘ **ʀᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅꜱ (ꜱᴜᴅᴏ_ᴜꜱᴇʀꜱ)** :
+✘ **OWNERS** :
 
-‣ /vcraid <ᴄʜᴀᴛɪᴅ> - ɢɪᴠᴇ ᴀ ᴄʜᴀᴛ ɪᴅ ᴇʟꜱᴇ ᴜꜱᴇʀɴᴀᴍᴇ ᴛᴏ ᴠᴏɪᴄᴇ ʀᴀɪᴅ.
-‣ /vraid <ᴄʜᴀᴛɪᴅ + ʀᴇᴘʟʏ ᴛᴏ ᴠɪᴅᴇᴏ ꜰɪʟᴇ> - ᴛᴏ ʀᴀɪᴅ ᴠɪᴅᴇᴏ.
-‣ /raidpause - ᴛᴏ ᴘᴀᴜꜱᴇ ʀᴀɪᴅ.
-‣ /raidresume ᴛᴏ ʀᴇꜱᴜᴍᴇ ʀᴀɪᴅ.
-‣ /raidend <ᴄʜᴀᴛɪᴅ> ᴛᴏ ᴇɴᴅ ᴀᴜᴅɪᴏ/ᴠɪᴅᴇᴏ ʀᴀɪᴅ.
+‣ ** ☘️ ਰੂਹਾਨੀਅਤ ☘️ AND ISHU** .
 """
 
 ADMIN = """
@@ -96,7 +92,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("✘ ᴜꜱᴇʀꜱ", callback_data="users"),
             ],
             [
-                InlineKeyboardButton("✘ ᴠᴄ ʀᴀɪᴅ", callback_data="raid"),
+                InlineKeyboardButton("✘ OWNERS", callback_data="raid"),
                 InlineKeyboardButton("✘ ꜱᴘᴀᴍ", callback_data="spam"),
             ],
             [
@@ -120,16 +116,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         get_me = await client.get_me()
         USERNAME = get_me.username
         buttons = [
-            [
-                InlineKeyboardButton("✘ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛꜱ", url='https://t.me/{USERNAME}?startgroup=true'),
-            ],
-            [
-                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton("✘ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-            ],
-            [
-                InlineKeyboardButton("✘ ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://github.com/Itz-Zaid/Zaid-Vc-Player"),
-            ],
+    
             [
                 InlineKeyboardButton("✘ ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="help"),
             ]
@@ -245,16 +232,7 @@ async def start(client: Client, message: Message):
     await add_served_user(user_id)
     USERNAME = get_me.username
     buttons = [
-            [
-                InlineKeyboardButton("✘ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛꜱ", url='https://t.me/{USERNAME}?startgroup=true'),
-            ],
-            [
-                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton("✘ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-            ],
-            [
-                InlineKeyboardButton("✘ ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://github.com/Itz-Zaid/Zaid-Vc-Player"),
-            ],
+
             [
                 InlineKeyboardButton("✘ ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="help"),
             ]
@@ -272,7 +250,7 @@ async def help(client: Client, message: Message):
                 InlineKeyboardButton("✘ ᴜꜱᴇʀꜱ", callback_data="users"),
             ],
             [
-                InlineKeyboardButton("✘ ᴠᴄ ʀᴀɪᴅ", callback_data="raid"),
+                InlineKeyboardButton("✘ OWNERS", callback_data="raid"),
                 InlineKeyboardButton("✘ ꜱᴘᴀᴍ", callback_data="spam"),
             ],
             [
