@@ -61,11 +61,11 @@ async def skip(client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await m.reply("❌ nothing is currently playing")
+            await m.reply("❌ Nothing is currently playing")
         elif op == 1:
-            await m.reply("✅ __Queues__ **is empty.**\n\n**• userbot leaving voice chat**")
+            await m.reply("✅ __Queues__ **is empty.**\n\n**• Bot leaving voice chat**")
         elif op == 2:
-            await m.reply("🗑️ **Clearing the Queues**\n\n**• userbot leaving voice chat**")
+            await m.reply("🗑️ **Clearing the Queues**\n\n**• Bot leaving voice chat**")
         else:
             await m.reply_photo(
                 photo=f"{SKIP_IMG}",
@@ -74,7 +74,7 @@ async def skip(client, m: Message):
             )
     else:
         skip = m.text.split(None, 1)[1]
-        OP = "🗑 **removed song from queue:**"
+        OP = "🗑 **Removed song from queue:**"
         if chat_id in QUEUE:
             items = [int(x) for x in skip.split(" ") if x.isdigit()]
             items.sort(reverse=True)
@@ -116,7 +116,7 @@ async def stop(client, m: Message):
             await remove_active_video_chat(chat_id)
             await remove_active_chat(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ The userbot has disconnected from the video chat.")
+            await m.reply("✅ The Bot has disconnected from the video chat.")
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
@@ -151,7 +151,7 @@ async def pause(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing in streaming**")
+        await m.reply("❌ **Nothing in streaming**")
 
 
 @Client.on_message(
@@ -182,7 +182,7 @@ async def resume(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing in streaming**")
+        await m.reply("❌ **Nothing in streaming**")
 
 
 @Client.on_message(
@@ -208,12 +208,12 @@ async def mute(client, m: Message):
             if int(assistant) == 6:
                await call_py.mute_stream(chat_id)
             await m.reply(
-                "🔇 **Userbot muted.**\n\n• **To unmute the userbot, use the**\n» /unmute command."
+                "🔇 **Bot muted.**\n\n• **To unmute the Bot, use the**\n» /unmute command."
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing in streaming**")
+        await m.reply("❌ **Nothing in streaming**")
 
 
 @Client.on_message(
